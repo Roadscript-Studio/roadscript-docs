@@ -5,7 +5,7 @@ This document summarizes which Roadscript repositories are public, which remain 
 | Repository | Visibility | Owns | Notes |
 | --- | --- | --- | --- |
 | `roadscript-docs` | Public | Overview docs, architecture notes, repository boundaries, milestone summaries | Intended as the public company/project documentation entry point |
-| `roadscript-cli` | Public | `apps/cli/`, `apps/tui/`, `docs/`, `examples/`, `tests/`, `tools/` | Demonstrates the application layer and consumes the installed Engine package |
+| `cyphra-cli` | Public | CLI, workflow DSL, local TUI prototype, examples, tests, and tools | Public repository for Cyphra CLI, the developer-facing command-line and workflow layer |
 | `roadscript-engine` | Private | Portable C++ core watermarking package | Exported as `RoadscriptEngine` with public target `Roadscript::rsengine` |
 | `roadscript-site` | Public / public-facing | Website and demo surface | Can default to mock data for static deployments |
 
@@ -14,10 +14,10 @@ This document summarizes which Roadscript repositories are public, which remain 
 The public repositories are intended to show:
 
 - application architecture
-- CLI and workflow structure
+- Cyphra CLI and workflow structure
 - examples, tests, and tooling
 - documentation quality and repository discipline
 
 ## Private Repository
 
-The private `roadscript-engine` repository exists to protect the core implementation boundary while still allowing `roadscript-cli` to demonstrate real integration through CMake package consumption.
+The private `roadscript-engine` repository exists to protect the core implementation boundary while still allowing `cyphra-cli` to demonstrate real integration through CMake package consumption.

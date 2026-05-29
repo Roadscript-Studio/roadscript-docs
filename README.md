@@ -15,7 +15,7 @@ The public repositories focus on documentation, application-layer tooling, and t
 | Repository | Visibility | Purpose |
 |---|---:|---|
 | [`roadscript-docs`](https://github.com/Roadscript-Studio/roadscript-docs) | Public | Public overview, architecture notes, repository boundaries, and development milestones. |
-| [`roadscript-cli`](https://github.com/Roadscript-Studio/roadscript-cli) | Public | Standalone CLI, workflow DSL, local TUI prototype, docs, examples, tests, and tooling. |
+| [`cyphra-cli`](https://github.com/Roadscript-Studio/cyphra-cli) | Public | Public repository for Cyphra CLI, the developer-facing command-line and workflow layer. |
 | [`roadscript-site`](https://github.com/Roadscript-Studio/roadscript-site) | Public | Public website and sample-driven demo surface. |
 | `roadscript-engine` | Private | Portable C++ core package exported as an installable CMake package. |
 
@@ -24,7 +24,7 @@ The public repositories focus on documentation, application-layer tooling, and t
 Roadscript is organized around a clear public/private boundary.
 
 - `roadscript-engine` is the private C++ core package and implementation boundary.
-- `roadscript-cli` is the public application/tooling layer that consumes the Engine through an installed CMake package.
+- `cyphra-cli` is the public repository for Cyphra CLI, the developer-facing command-line and workflow layer that consumes the Engine through an installed CMake package.
 - The package boundary is `RoadscriptEngine`, with the exported CMake target `Roadscript::rsengine`.
 - `roadscript-site` is the public-facing website and demo surface. It can use mock data for static deployment.
 - `roadscript-docs` explains the project structure, repository responsibilities, development milestones, and public/private boundaries.
@@ -36,11 +36,11 @@ This split allows the public repositories to demonstrate architecture, tooling, 
 The public Roadscript repositories intentionally expose:
 
 - repository structure and architecture notes
-- CLI and application-layer design
+- Cyphra CLI and application-layer design
 - workflow DSL examples and usage patterns
 - documentation and repository split history
 - website/demo presentation layer
-- tests, examples, and tooling structure in `roadscript-cli`
+- tests, examples, and tooling structure in `cyphra-cli`
 
 ## What Remains Private
 
@@ -60,8 +60,8 @@ Roadscript recently moved from a monorepo-style development structure into clear
 Completed milestones include:
 
 - `roadscript-engine` was separated into a private, installable C++ package.
-- `roadscript-cli` became a standalone public application repository.
-- `roadscript-cli` now consumes the installed Engine package instead of bundling Engine source directly.
+- `cyphra-cli` became the standalone public repository for Cyphra CLI.
+- `cyphra-cli` now consumes the installed Engine package instead of bundling Engine source directly.
 - The CMake package boundary is exposed as `RoadscriptEngine` / `Roadscript::rsengine`.
 - `roadscript-site` was renamed and positioned as the public website/demo surface.
 - `roadscript-docs` was converted from an internal planning workspace into a public overview and architecture repository.
@@ -75,10 +75,10 @@ The Roadscript ecosystem demonstrates:
 
 - C++ package architecture with a clean export/consume boundary
 - CMake package installation and downstream linking
-- CLI and workflow design
+- Cyphra CLI and workflow design
 - repository separation between public application layers and private core IP
 - documentation discipline around public-safe technical communication
-- organized examples, tests, and tooling in `roadscript-cli`
+- organized examples, tests, and tooling in `cyphra-cli`
 - product-facing presentation through `roadscript-site`
 
 Start here if you want to understand the project structure before looking at the public code repositories.
@@ -93,7 +93,7 @@ Start here if you want to understand the project structure before looking at the
 ## Related Repositories
 
 - [`roadscript-docs`](https://github.com/Roadscript-Studio/roadscript-docs) — public overview, architecture notes, and repository boundaries.
-- [`roadscript-cli`](https://github.com/Roadscript-Studio/roadscript-cli) — standalone CLI, workflow DSL, local TUI prototype, examples, tests, and tooling.
+- [`cyphra-cli`](https://github.com/Roadscript-Studio/cyphra-cli) — public repository for Cyphra CLI, the developer-facing command-line and workflow layer.
 - [`roadscript-site`](https://github.com/Roadscript-Studio/roadscript-site) — public website and sample-driven demo surface.
 - `roadscript-engine` — private C++ core package, not publicly linked.
 

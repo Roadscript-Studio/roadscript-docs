@@ -5,7 +5,7 @@ The `roadscript-docs` repository documents the public structure around Roadscrip
 ## High-Level Components
 
 - `roadscript-engine` is the private core package repository.
-- `roadscript-cli` is the public application and tooling repository.
+- `cyphra-cli` is the public repository for Cyphra CLI, the developer-facing command-line and workflow layer.
 - `roadscript-site` is the public-facing website and demo surface repository.
 - `roadscript-docs` provides overview material, architecture notes, and repository boundary documentation.
 
@@ -16,7 +16,7 @@ The Engine is published internally from `roadscript-engine` as an installable CM
 - Package name: `RoadscriptEngine`
 - Public CMake target: `Roadscript::rsengine`
 
-The CLI consumes that package through standard CMake dependency boundaries rather than by including Engine source files directly.
+Cyphra CLI consumes that package through standard CMake dependency boundaries rather than by including Engine source files directly.
 
 ## Responsibility Split
 
@@ -26,9 +26,9 @@ The CLI consumes that package through standard CMake dependency boundaries rathe
 - Preserves implementation details and core IP
 - Exposes a stable package boundary for downstream consumers
 
-### Public CLI
+### Public Cyphra CLI
 
-- Owns the standalone command-line application
+- `cyphra-cli` owns the Cyphra CLI application layer
 - Includes the local TUI prototype
 - Demonstrates workflow orchestration, docs, examples, tests, and tooling
 - Shows how the application layer integrates with the installed Engine package

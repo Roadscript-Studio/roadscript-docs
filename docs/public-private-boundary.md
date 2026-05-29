@@ -12,7 +12,7 @@ Roadscript is organized to make the application layer reviewable in public while
 
 - Repository structure and ownership boundaries
 - CMake package consumption at the application layer
-- CLI design and workflow examples
+- Cyphra CLI design and workflow examples
 - Documentation, tests, examples, and tooling organization
 - High-level architecture and development milestones
 
